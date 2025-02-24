@@ -1,4 +1,5 @@
 import { initTRPC } from "@trpc/server";
+import { EventEmitter } from "events";
 import { auth } from "../middlewares/auth";
 import { checkRole } from "../middlewares/checkRole";
 import { Context } from "./context";
@@ -26,6 +27,8 @@ export const adminProcedure = t.procedure
   .use(errorHanlder(t));
 
 export const privateProcedure = t.procedure.use(auth(t)).use(errorHanlder(t));
+
+export const eventEmitter = new EventEmitter();
 
 export type TRPCReturnType = typeof t;
 
