@@ -1,4 +1,5 @@
 import http from "http";
+import { Document, Model } from "mongoose";
 
 export interface Meta {
   authRequired: boolean;
@@ -13,4 +14,10 @@ export interface User {
 export interface BaseContext {
   req: http.IncomingMessage;
   user?: User | null;
+}
+
+export interface IUser extends Model<Document> {
+  name: string;
+  email: string;
+  password: string;
 }
