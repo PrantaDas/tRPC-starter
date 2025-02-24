@@ -4,6 +4,7 @@ import { checkRole } from "../middlewares/checkRole";
 import { Context } from "./context";
 import { Meta } from "../types";
 import { CONFIG } from "../config";
+import { errorHanlder } from "../middlewares/errorHandler";
 
 export const t = initTRPC
   .context<Context>()
@@ -17,11 +18,14 @@ export const t = initTRPC
 
 export const router = t.router;
 
-export const publicProcedure = t.procedure;
+export const publicProcedure = t.procedure.use(errorHanlder(t));
 
-export const adminProcedure = t.procedure.use(auth(t)).use(checkRole(t));
+export const adminProcedure = t.procedure
+  .use(auth(t))
+  .use(checkRole(t))
+  .use(errorHanlder(t));
 
-export const privateProcedure = t.procedure.use(auth(t));
+export const privateProcedure = t.procedure.use(auth(t)).use(errorHanlder(t));
 
 export type TRPCReturnType = typeof t;
 
