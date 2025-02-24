@@ -1,5 +1,5 @@
 import { TRPCError } from "@trpc/server";
-import { t } from "../trpc/trpc";
+import { t } from "../trpc";
 
 export const errorHanlder = t.middleware(({ next }) => {
   try {

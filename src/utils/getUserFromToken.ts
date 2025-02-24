@@ -1,16 +1,16 @@
-import { User } from "../trpc/context";
+import { User } from "../types";
 
 export const getUserFromToken = (token: string): User | null => {
   try {
     if (token) {
       return {
         id: "1",
-        role: "admin"
-      }
+        role: "admin",
+      };
     }
-    return null
+    return null;
   } catch (err) {
     console.log(err);
-    return null
+    return null;
   }
 };
