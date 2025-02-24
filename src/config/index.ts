@@ -10,5 +10,5 @@ export const CONFIG = {
   X_API_KEY: process.env.X_API_KEY!,
   JWT_SECRET: process.env.JWT_SECRET!,
   REDIS_HOST: process.env.REDIS_HOST!,
-  REDIS_PORT: process.env.REDIS_PORT!,
+  REDIS_PORT: parseInt(process.env.REDIS_PORT!),
 };
