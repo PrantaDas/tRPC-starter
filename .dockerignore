@@ -1,0 +1,9 @@
+.nvmrc
+README.md
+.gitignore
+LICENSE
+*.log
+*.lgo.gz
+node_modules
+ssl
+log
