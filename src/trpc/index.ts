@@ -3,6 +3,7 @@ import { auth } from "../middlewares/auth";
 import { checkRole } from "../middlewares/checkRole";
 import { Context } from "./context";
 import { Meta } from "../types";
+import { CONFIG } from "../config";
 
 export const t = initTRPC
   .context<Context>()
@@ -11,7 +12,7 @@ export const t = initTRPC
     defaultMeta: {
       authRequired: false,
     },
-    isDev: process.env.NODE_ENV === "development",
+    isDev: CONFIG.IS_DEV_MODE,
   });
 
 export const router = t.router;
