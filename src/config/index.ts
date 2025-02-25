@@ -3,6 +3,7 @@ config();
 
 export const CONFIG = {
   IS_DEV_MODE: process.env.NODE_ENV === "development",
+  CORS_ORIGINS: process.env.CORS_ORIGINS?.split(",").filter(Boolean),
   NODE_ENV: process.env.NODE_ENV!,
   PORT: parseInt(process.env.PORT!),
   MONGO_URL: process.env.MONGO_URL!,

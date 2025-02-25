@@ -17,3 +17,10 @@ export interface IUser extends Model<Document> {
   password: string;
   role: "admin" | "user";
 }
+
+
+export type Middleware = (
+  req: http.IncomingMessage,
+  res: http.ServerResponse,
+  next: (err?: unknown) => void
+) => void;

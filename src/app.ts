@@ -6,11 +6,13 @@ import { applyWSSHandler } from "@trpc/server/adapters/ws";
 import { connectDB } from "./db/db";
 import { logger } from "./utils/logger";
 import { CONFIG } from "./config";
+import { combinedMiddleware } from "./middlewares/combinedMiddleware";
 
 export const app = async () => {
   const server = createHTTPServer({
     router: routes,
     createContext,
+    middleware: combinedMiddleware
   });
 
   const wss = new WebSocketServer({ server: server.server });
