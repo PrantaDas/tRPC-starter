@@ -141,7 +141,7 @@ Expected response:
 |   |   ├── logger.ts
 |   |   ├── parseCookie.ts
 |   |   ├── response.ts
-|   |   └──validApiKey.ts
+|   |   └── validApiKey.ts
 |   |
 |   ├── validations/
 |   |   └── auth.ts
