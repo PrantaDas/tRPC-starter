@@ -61,15 +61,42 @@ Before you begin, ensure you have the following installed:
 
 4. Set up environment variables:
     ```bash
-    NODE_ENV=""
-    PORT=""
-    MONGO_URL=""
-    COOKE_KEY=""
-    X_API_KEY=""
-    JWT_SECRET=""
-    REDIS_HOST=""
-    REDIS_PORT=""
+    NODE_ENV="development"
+    PORT="5000"
+    MONGO_URL="mongodb://localhost:27017/trpc-starter"
+    COOKE_KEY="some-cookie-key"
+    X_API_KEY="your-api-key"
+    JWT_SECRET="your-jwt-secret"
+    REDIS_HOST="localhost"
+    REDIS_PORT="6379"
     ```
+
+### Scripts
+* `dev`: Start the development server with hot reloading.
+
+* `build`: Compile TypeScript code to JavaScript.
+
+* `start`: Start the production server.
+
+### Test the tRPC API:
+The template includes a sample tRPC router with a hello procedure. You can test it by sending a request to the `/hello` endpoint.
+Example request:
+```bash
+curl -X POST http://localhost:5000/hello \
+-H "Content-Type: application/json" \
+-d '{}'
+```
+Expected response:
+
+
+```json
+{
+  "result": {
+    "data": "Hello from tRPC server!"
+  }
+}
+```
+
 
 ### Folder Structure
 
@@ -133,12 +160,6 @@ Before you begin, ensure you have the following installed:
 └── tsconfig.json
 ```
 
-### Scripts
-* `dev`: Start the development server with hot reloading.
-
-* `build`: Compile TypeScript code to JavaScript.
-
-* `start`: Start the production server.
 
 ### Contributing
 If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request. Contributions are welcome!
