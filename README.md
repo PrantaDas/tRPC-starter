@@ -155,6 +155,7 @@ Expected response:
 ├── .gitignore
 ├── .nvmrc
 ├── docker-compose.yml
+├── Dockerfile
 ├── LICENSE
 ├── package.json
 ├── README.md
