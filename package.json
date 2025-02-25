@@ -1,16 +1,33 @@
 {
-  "name": "trpc-standalone",
+  "name": "trpc-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple starter temlate to start any project with tRPC and Node.Js",
   "main": "src/server.ts",
   "scripts": {
     "dev": "nodemon --watch src src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "tRPC",
+    "trpc",
+    "nodejs",
+    "Node.Js",
+    "template",
+    "boilerplate",
+    "mongodb",
+    "mongoose",
+    "redis",
+    "trpc-node",
+    "trpc-nodejs",
+    "trpc-standalone"
+  ],
+  "author": {
+    "email": "prantodas043@gmail.com",
+    "name": "Pranta Das",
+    "url": "https://github.com/Prantadas"
+  },
+  "license": "MIT",
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/express": "^5.0.0",

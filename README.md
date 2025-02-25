@@ -1,4 +1,4 @@
-## tRPC Starter Template
+# tRPC Starter Template       🐬
 
 Welcome to the `tRPC` starter template. This template is designed to help you quickly bootstrap a new project with a modern stack, including `tRPC` for type-safe APIs, `MongoDB` for database storage, and `Redis` for caching and other use cases.
 
@@ -30,13 +30,13 @@ Before you begin, ensure you have the following installed:
 1. Clone the repository
 
     ```bash
-    git clone https://github.com/PrantaDas/trpc-starter.git
+    git clone https://github.com/PrantaDas/tRPC-starter.git
     ```
 
 2. Change the dirctory
 
     ```bash
-    cd trpc-starter
+    cd tRPC-starter
     ```
 
 3. Install dependencies
@@ -108,12 +108,21 @@ Before you begin, ensure you have the following installed:
 |   |   ├── context.ts
 |   |   ├── index.ts
 |   |   └── routes.ts
+|   | 
 |   ├── utils/
+|   |   ├── getUserFromToken.ts
+|   |   ├── logger.ts
+|   |   ├── parseCookie.ts
+|   |   ├── response.ts
+|   |   └──validApiKey.ts
+|   |
 |   ├── validations/
+|   |   └── auth.ts
 |   |
 |   ├── app.ts
 |   ├── server.ts
 |   └── types.ts
+|
 ├── .dockerignore
 ├── .env
 ├── .nvmrc
