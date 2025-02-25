@@ -6,18 +6,14 @@ export interface Meta {
   role?: "user" | "admin";
 }
 
-export interface User {
-  id: string;
-  role: "admin" | "user";
-}
-
 export interface BaseContext {
   req: http.IncomingMessage;
-  user?: User | null;
+  user?: IUser | null;
 }
 
 export interface IUser extends Model<Document> {
   name: string;
   email: string;
   password: string;
+  role: "admin" | "user";
 }
