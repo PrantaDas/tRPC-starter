@@ -100,7 +100,7 @@ Before you begin, ensure you have the following installed:
 |   |   └── errorHandler.ts
 |   |
 |   ├── modules/
-|   |   └── User
+|   |   └── auth
 |   |       ├── auth.router.ts
 |   |       └── auth.service.ts
 |   |
