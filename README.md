@@ -152,6 +152,7 @@ Expected response:
 |
 ├── .dockerignore
 ├── .env
+├── .gitignore
 ├── .nvmrc
 ├── docker-compose.yml
 ├── LICENSE
